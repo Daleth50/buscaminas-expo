@@ -114,7 +114,7 @@ export default function PlayScreen(): React.JSX.Element {
               {result === 'win' ? 'Victoria' : 'Derrota'}
             </Text>
             <Text color={result === 'win' ? '$emerald900' : '$red900'}>
-              {result === 'win' ? `Completaste el tablero en ${seconds}s.` : 'Pisaste una mina. Intenta otra partida.'}
+              {result === 'win' ? `Completaste el tablero en ${seconds}s.` : 'Encontraste una mina.'}
             </Text>
             <Button mt="$2" size="sm" bg={result === 'win' ? '$emerald700' : '$red700'} onPress={() => resetGame(rows, cols, mines)}>
               <ButtonText>Jugar de nuevo</ButtonText>
@@ -123,7 +123,7 @@ export default function PlayScreen(): React.JSX.Element {
         )}
 
         <Button variant="outline" borderColor="$coolGray300" onPress={() => router.replace('/(tabs)')}>
-          <ButtonText color="$coolGray200">Cambiar configuracion</ButtonText>
+          <ButtonText color="$coolGray200">Juego nuevo</ButtonText>
         </Button>
       </VStack>
     </Box>
